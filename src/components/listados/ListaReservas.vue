@@ -16,7 +16,7 @@
       de {{ data.item.desde }} a {{data.item.hasta}}
     </template>
     <template #cell(accion)="row">
-      <b-button id="btn-remover" size="sm" @click="remover(row.item, row.index, $event.target)">
+      <b-button id="btn-remover" size="sm" @click="remover(row.item, row.index, $event.target)" title="Eliminar">
         <b-icon-trash />
       </b-button>
     </template>

@@ -11,6 +11,9 @@ import VueSweetalert2 from 'vue-sweetalert2';
 // If you don't need the styles, do not connect
 import 'sweetalert2/dist/sweetalert2.min.css';
 import "vue2vis/dist/vue2vis.css";
+
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 Vue.use(VueSweetalert2);
