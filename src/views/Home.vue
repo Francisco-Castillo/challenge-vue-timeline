@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+  <b-container class="mt-30">
+    <b-row>
+      <b-col lg="12">
+        <FormAgendarReserva />
+      </b-col>
+    </b-row>
+    <b-row class="mt-4">
+      <b-col lg="12">
+        <Timeline/>
+      </b-col>
+    </b-row>
+    <b-row class="mt-4">
+      <b-col lg="12">
+        <ListaReservas />
+      </b-col>
+    </b-row>
+  </b-container>
+</div>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import FormAgendarReserva from "@/components/formularios/FormAgendarReserva.vue"
+import ListaReservas from "@/components/listados/ListaReservas.vue"
+import Timeline from "@/components/timeline/Timeline.vue"
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+components:{
+  FormAgendarReserva,
+  ListaReservas,
+  Timeline
+},
+
 }
 </script>
+<style scoped>
+.mt-30{
+  margin-top:30px;
+}
+</style>
