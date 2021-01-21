@@ -49,7 +49,8 @@ export default {
   },
   methods: {
     ...mapActions("ReservaModule",["deleteItem"]),
-    
+    ...mapActions("TimelineModule",["deleteItemTimeline"]),
+
     remover(item, index, event) {
       console.log(item, index, event)
       this.$swal({
@@ -63,6 +64,7 @@ export default {
         confirmButtonText: 'Si, eliminarla!',
       }).then((result)=>{
         if (result.isConfirmed) {
+          this.deleteItemTimeline(item);
           this.deleteItem(item);
           this.$swal({
             icon: 'success',

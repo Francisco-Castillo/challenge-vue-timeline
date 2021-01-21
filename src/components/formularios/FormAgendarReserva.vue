@@ -43,8 +43,6 @@
 <script>
 import { mapActions} from "vuex";
 import { createHelpers } from "vuex-map-fields";
-import moment from 'moment';
-
 const { mapFields } = createHelpers({
   getterType: "ReservaModule/getReservaField",
   mutationType: "ReservaModule/updateReservaField"
@@ -69,8 +67,8 @@ export default {
       this.form.hasta=""
     },
     agendar(){
-      console.log("Moment: ", moment().format())
       this.addItems(this.form);
+
       this.addItemsTimeline(this.form);
       this.clearForm();
     },

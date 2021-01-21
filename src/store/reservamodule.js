@@ -16,7 +16,7 @@ export default{
       btnGuardar: "Guardar"
     },
     form:{
-      id:0,
+      id:1,
       nombre:"",
       fecha:new Date(),
       desde:"",
@@ -53,6 +53,9 @@ export default{
     setIncrementId(state){
       state.form.id++;
     },
+    setDecrementId(state){
+      state.form.id--;
+    },
     setDeleteItem(state, data){
       state.table.items = state.table.items.filter(val=>val.id !== data.id);
     }
@@ -64,6 +67,7 @@ export default{
     },
     deleteItem(ctx, data){
       ctx.commit("setDeleteItem",data);
+      ctx.commit("setDecrementId");
     }
   },
   getters:{
