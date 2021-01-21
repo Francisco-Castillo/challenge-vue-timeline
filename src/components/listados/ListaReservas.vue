@@ -26,9 +26,9 @@
 </div>
 </template>
 <script>
-import {
-  createHelpers
-} from "vuex-map-fields";
+import { mapActions} from "vuex";
+
+import {createHelpers} from "vuex-map-fields";
 const {
   mapFields
 } = createHelpers({
@@ -48,6 +48,8 @@ export default {
     }
   },
   methods: {
+    ...mapActions("ReservaModule",["deleteItem"]),
+    
     remover(item, index, event) {
       console.log(item, index, event)
       this.$swal({
@@ -61,6 +63,7 @@ export default {
         confirmButtonText: 'Si, eliminarla!',
       }).then((result)=>{
         if (result.isConfirmed) {
+          this.deleteItem(item);
           this.$swal({
             icon: 'success',
             title: 'Eliminación exitosa!',

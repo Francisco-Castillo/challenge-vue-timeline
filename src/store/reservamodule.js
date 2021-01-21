@@ -52,12 +52,18 @@ export default{
 
     setIncrementId(state){
       state.form.id++;
+    },
+    setDeleteItem(state, data){
+      state.table.items = state.table.items.filter(val=>val.id !== data.id);
     }
   },
   actions:{
     addItems(ctx,data){
       ctx.commit("setItems",data);
-      ctx.commit("setIncrementId")
+      ctx.commit("setIncrementId");
+    },
+    deleteItem(ctx, data){
+      ctx.commit("setDeleteItem",data);
     }
   },
   getters:{
