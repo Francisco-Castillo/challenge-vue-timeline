@@ -18,13 +18,13 @@
          <b-col lg="2">
            <label for="input-desde">{{label.desde}}</label>
            <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
-            <b-form-timepicker id="input-desde" v-model="form.desde" locale="es" placeholder="12:00">
+            <b-form-timepicker id="input-desde" v-model="form.desde" locale="es" placeholder="12:00"/>
            </b-input-group>
          </b-col>
          <b-col lg="2">
            <label for="input-hasta">{{label.hasta}}</label>
            <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
-             <b-form-timepicker id="input-hasta" v-model="form.hasta" locale="es" placeholder="13:00" dropright>
+             <b-form-timepicker id="input-hasta" v-model="form.hasta" locale="es" placeholder="13:00" dropright/>
            </b-input-group>
          </b-col>
          <b-col lg="1">
