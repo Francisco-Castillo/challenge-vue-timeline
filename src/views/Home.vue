@@ -23,6 +23,7 @@
 import FormAgendarReserva from "@/components/formularios/FormAgendarReserva.vue"
 import ListaReservas from "@/components/listados/ListaReservas.vue"
 import Timeline from "@/components/timeline/Timeline.vue"
+
 export default {
 components:{
   FormAgendarReserva,

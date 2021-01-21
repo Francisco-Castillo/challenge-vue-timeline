@@ -6,10 +6,14 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { Timeline } from "vue2vis";
+import VueSweetalert2 from 'vue-sweetalert2';
 
+// If you don't need the styles, do not connect
+import 'sweetalert2/dist/sweetalert2.min.css';
 import "vue2vis/dist/vue2vis.css";
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
+Vue.use(VueSweetalert2);
 Vue.use(require('vue-moment'));
 Vue.component("timeline", Timeline);
 Vue.config.productionTip = false
