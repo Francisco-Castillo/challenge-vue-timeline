@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import ReservaModule from "./reservamodule.js"
+import TimelineModule from "./timelinemodule.js"
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+const store = new Vuex.Store({
+    modules: {
+        ReservaModule: ReservaModule,
+        TimelineModule: TimelineModule
+    }
+});
+
+export default store;
