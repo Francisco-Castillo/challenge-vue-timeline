@@ -6,33 +6,29 @@
      <b-form id="frm-reservas" class="mt-4">
        <b-form-row>
          <b-col lg="4">
-           <label for="inline-form-input-name">{{label.nombre}}</label>
-           <b-form-input
-             id="inline-form-input-name"
-             class="mb-2 mr-sm-2 mb-sm-0"
-             v-model="form.nombre"
-           ></b-form-input>
+           <label for="input-nombre">{{label.nombre}}</label>
+           <b-form-input id="input-nombre" class="mb-2 mr-sm-2 mb-sm-0" v-model="form.nombre"/>
          </b-col>
          <b-col lg="2">
-           <label for="inline-form-input-username">{{label.fecha}}</label>
+           <label for="input-fecha">{{label.fecha}}</label>
            <b-input-group  class="mb-2 mr-sm-2 mb-sm-0">
-              <b-form-datepicker id="example-datepicker" placeholder="30/9/2019" v-model="form.fecha" :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }" class="mb-2"/>
+              <b-form-datepicker id="input-fecha" placeholder="30/9/2019" v-model="form.fecha" :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }" class="mb-2"/>
            </b-input-group>
          </b-col>
          <b-col lg="2">
-           <label for="inline-form-input-username">{{label.desde}}</label>
+           <label for="input-desde">{{label.desde}}</label>
            <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
-            <b-form-timepicker v-model="form.desde" locale="es" placeholder="12:00"></b-form-timepicker>
+            <b-form-timepicker id="input-desde" v-model="form.desde" locale="es" placeholder="12:00">
            </b-input-group>
          </b-col>
          <b-col lg="2">
-           <label for="inline-form-input-username">{{label.hasta}}</label>
+           <label for="input-hasta">{{label.hasta}}</label>
            <b-input-group class="mb-2 mr-sm-2 mb-sm-0">
-             <b-form-timepicker v-model="form.hasta" locale="es" placeholder="13:00" dropright></b-form-timepicker>
+             <b-form-timepicker id="input-hasta" v-model="form.hasta" locale="es" placeholder="13:00" dropright>
            </b-input-group>
          </b-col>
          <b-col lg="1">
-           <label for="inline-form-input-username"> </label>
+           <label for="btn-guardar"> </label>
             <b-input-group class="mb-0 mr-sm-2 mb-sm-0 mt-2">
               <b-button id="btn-guardar" @click="agendar()">{{label.btnGuardar}}</b-button>
             </b-input-group>
