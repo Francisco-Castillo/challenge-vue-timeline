@@ -12,7 +12,7 @@
          <b-col lg="2">
            <label for="input-fecha">{{label.fecha}}</label>
            <b-input-group  class="mb-2 mr-sm-2 mb-sm-0">
-              <b-form-datepicker id="input-fecha" placeholder="30/9/2019" v-model="$v.form.fecha.$model" :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }" class="mb-2"/>
+              <b-form-datepicker id="input-fecha" placeholder="30/9/2019" v-model="$v.form.fecha.$model" :min="min" :date-format-options="{ year: 'numeric', month: 'numeric', day: 'numeric' }" class="mb-2"/>
            </b-input-group>
          </b-col>
          <b-col lg="2">
@@ -56,8 +56,12 @@ export default {
     ...mapFields({form :"form", label:"labels"})
   },
   data(){
+    const now = new Date()
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    const minDate = new Date(today)
     return{
       titleCard : "RESERVAR",
+      min: minDate,
     }
   },
   validations:{
